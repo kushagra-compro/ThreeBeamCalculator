@@ -1,0 +1,196 @@
+{
+  "_carWeight": 5610,
+  "_capacity": 3000,
+  "_counterWeight": 6810,
+  "_hoistRopeWeight": 770,
+  "_compensationWeight": 657,
+  "_carRopingRatio": {
+    "_leftValue": 1,
+    "_rightValue": 1
+  },
+  "_counterWeightRopingRatio": {
+    "_leftValue": 1,
+    "_rightValue": 1
+  },
+  "_travellingCableWeight": 0,
+  "_arcOfContact": 154,
+  "_blockUpBeamsWeight": 0,
+  "_machineWeight": 3900,
+  "_motorWeight": 610,
+  "_isolationWeight": 0,
+  "_deflectorWeight": 340,
+  "_machineBeamSpacing_Z": {
+    "W": 4,
+    "X": 10,
+    "Y": 10,
+    "Z": 0
+  },
+  "_slabThickness": 0,
+  "_beamType": "New",
+  "_grossTotalLiveLoad": 0,
+  "_totalLiveLoad": 0,
+  "_floorSlabWeight": 0,
+  "_totalDeadLoad": 0,
+  "_beamParams": [
+    {
+      "_beamIndex": 1,
+      "_machineBeamWeight": 112,
+      "_blockingBeamWeight": 0,
+      "_distanceBetweenReactions_L": 96,
+      "_machineLoadPoints": [
+        {
+          "_loadName": "PointLoad",
+          "_rank": 1,
+          "_liveLoad": 0,
+          "_deadLoad": 0,
+          "_totalLoad": 0,
+          "_staticLoad": 0,
+          "_distanceLeft_a": 12,
+          "_distanceRight_b": 0,
+          "_momentum_LeftReaction": 0,
+          "_momentum_RightReaction": 0,
+          "_valueV1": 0
+        },
+        {
+          "_loadName": "MidPointLoad",
+          "_rank": 3,
+          "_liveLoad": 0,
+          "_deadLoad": 0,
+          "_totalLoad": 0,
+          "_staticLoad": 0,
+          "_distanceLeft_a": 48,
+          "_distanceRight_b": 0,
+          "_momentum_LeftReaction": 0,
+          "_momentum_RightReaction": 0,
+          "_valueV1": 0
+        },
+        {
+          "_loadName": "AdditionalLoad#1",
+          "_rank": 0,
+          "_liveLoad": 500,
+          "_deadLoad": 0,
+          "_totalLoad": 0,
+          "_staticLoad": 0,
+          "_distanceLeft_a": 12,
+          "_distanceRight_b": 0,
+          "_momentum_LeftReaction": 0,
+          "_momentum_RightReaction": 0,
+          "_valueV1": 0
+        }
+      ],
+      "_reactions": {
+        "_reactionLeft": 0,
+        "_reactionRight": 0
+      },
+      "_bendingMoments": {
+        "_bendingMomentLeft": 0,
+        "_bendingMomentRight": 0
+      },
+      "_requiredSectionModulus_Zu": 0,
+      "_maximumDeflection": 0
+    },
+    {
+      "_beamIndex": 2,
+      "_machineBeamWeight": 112,
+      "_blockingBeamWeight": 0,
+      "_distanceBetweenReactions_L": 96,
+      "_machineLoadPoints": [
+        {
+          "_loadName": "PointLoad",
+          "_rank": 1,
+          "_liveLoad": 0,
+          "_deadLoad": 0,
+          "_totalLoad": 0,
+          "_staticLoad": 0,
+          "_distanceLeft_a": 12,
+          "_distanceRight_b": 0,
+          "_momentum_LeftReaction": 0,
+          "_momentum_RightReaction": 0,
+          "_valueV1": 0
+        },
+        {
+          "_loadName": "PointLoad",
+          "_rank": 1,
+          "_liveLoad": 0,
+          "_deadLoad": 0,
+          "_totalLoad": 0,
+          "_staticLoad": 0,
+          "_distanceLeft_a": 36,
+          "_distanceRight_b": 0,
+          "_momentum_LeftReaction": 0,
+          "_momentum_RightReaction": 0,
+          "_valueV1": 0
+        },
+        {
+          "_loadName": "MidPointLoad",
+          "_rank": 2,
+          "_liveLoad": 0,
+          "_deadLoad": 0,
+          "_totalLoad": 0,
+          "_staticLoad": 0,
+          "_distanceLeft_a": 48,
+          "_distanceRight_b": 0,
+          "_momentum_LeftReaction": 0,
+          "_momentum_RightReaction": 0,
+          "_valueV1": 0
+        }
+      ],
+      "_reactions": {
+        "_reactionLeft": 0,
+        "_reactionRight": 0
+      },
+      "_bendingMoments": {
+        "_bendingMomentLeft": 0,
+        "_bendingMomentRight": 0
+      },
+      "_requiredSectionModulus_Zu": 0,
+      "_maximumDeflection": 0
+    },
+    {
+      "_beamIndex": 3,
+      "_machineBeamWeight": 112,
+      "_blockingBeamWeight":0,
+      "_distanceBetweenReactions_L": 96,
+      "_machineLoadPoints": [
+        {
+          "_loadName": "PointLoad",
+          "_rank": 1,
+          "_liveLoad": 0,
+          "_deadLoad": 0,
+          "_totalLoad": 0,
+          "_staticLoad": 0,
+          "_distanceLeft_a": 36,
+          "_distanceRight_b": 0,
+          "_momentum_LeftReaction": 0,
+          "_momentum_RightReaction": 0,
+          "_valueV1": 0
+        },
+        {
+          "_loadName": "MidPointLoad",
+          "_rank": 2,
+          "_liveLoad": 0,
+          "_deadLoad": 0,
+          "_totalLoad": 0,
+          "_staticLoad": 0,
+          "_distanceLeft_a": 48,
+          "_distanceRight_b": 0,
+          "_momentum_LeftReaction": 0,
+          "_momentum_RightReaction": 0,
+          "_valueV1": 0
+        }
+      ],
+      "_reactions": {
+        "_reactionLeft": 0,
+        "_reactionRight": 0
+      },
+      "_bendingMoments": {
+        "_bendingMomentLeft": 0,
+        "_bendingMomentRight": 0
+      },
+      "_requiredSectionModulus_Zu": 0,
+      "_maximumDeflection": 0
+    }
+  ],
+  "_maximumRequiredSectionModulus_Zu": 0,
+  "_recommendedBeams": []
+}

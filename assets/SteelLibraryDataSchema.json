@@ -1,0 +1,102 @@
+[
+    {
+        "id": "d85417cdab81451589c9765f5dc53477",
+        "beamLabel": "(3)-S3x5.7#",
+        "priority": 3,
+        "Shape": "S",
+        "height": 3,
+        "weightPerUnitLength": 5.7,
+        "momentOfInertia_I": 2.50,
+        "sectionModulus_Zu": 1.67
+    },
+    {
+        "id": "d85417cdab81451589c9765f5dc53477",
+        "beamLabel": "(3)-S3x7.5#",
+        "priority": 3,
+        "Shape": "S",
+        "height": 3,
+        "weightPerUnitLength": 7.5,
+        "momentOfInertia_I": 2.91,
+        "sectionModulus_Zu": 1.94
+    },
+    {
+        "id": "d85417cdab81451589c9765f5dc53477",
+        "beamLabel": "(3)-S4x7.7#",
+        "priority": 3,
+        "Shape": "S",
+        "height": 4,
+        "weightPerUnitLength": 7.7,
+        "momentOfInertia_I": 6.05,
+        "sectionModulus_Zu": 3.03
+    },
+    {
+        "id": "d85417cdab81451589c9765f5dc53477",
+        "beamLabel": "(3)-S4x9.5#",
+        "priority": 3,
+        "Shape": "S",
+        "height": 4,
+        "weightPerUnitLength": 9.5,
+        "momentOfInertia_I": 6.76,
+        "sectionModulus_Zu": 3.38
+    },
+    {
+        "id": "d85417cdab81451589c9765f5dc53477",
+        "beamLabel": "(3)-S5x10#",
+        "priority": 3,
+        "Shape": "S",
+        "height": 5,
+        "weightPerUnitLength": 10.0,
+        "momentOfInertia_I": 12.30,
+        "sectionModulus_Zu": 4.90
+    },
+    {
+        "id": "d85417cdab81451589c9765f5dc53477",
+        "beamLabel": "(3)-S6x12.5#",
+        "priority": 3,
+        "Shape": "S",
+        "height": 6,
+        "weightPerUnitLength": 12.5,
+        "momentOfInertia_I": 22,
+        "sectionModulus_Zu": 7.34
+    },
+    {
+        "id": "d85417cdab81451589c9765f5dc53477",
+        "beamLabel": "(3)-S6x17.2#",
+        "priority": 3,
+        "Shape": "S",
+        "height": 6,
+        "weightPerUnitLength": 17.2,
+        "momentOfInertia_I": 26.20,
+        "sectionModulus_Zu": 8.74
+    },
+    {
+        "id": "d85417cdab81451589c9765f5dc53477",
+        "beamLabel": "(3)-S8x18.4#",
+        "priority": 2,
+        "Shape": "S",
+        "height": 8,
+        "weightPerUnitLength": 18.4,
+        "momentOfInertia_I": 57.50,
+        "sectionModulus_Zu": 14.40
+    },
+    {
+        "id": "d85417cdab81451589c9765f5dc53477",
+        "beamLabel": "(3)-S8x23#",
+        "priority": 3,
+        "Shape": "S",
+        "height": 8,
+        "weightPerUnitLength": 23.0,
+        "momentOfInertia_I": 64.70,
+        "sectionModulus_Zu": 16.20
+    },
+    {
+        "id": "d85417cdab81451589c9765f5dc53477",
+        "beamLabel": "(3)-S10x25.4#",
+        "priority": 1,
+        "Shape": "S",
+        "height": 10,
+        "weightPerUnitLength": 25.4,
+        "momentOfInertia_I": 123.0,
+        "sectionModulus_Zu": 24.60
+    }
+]

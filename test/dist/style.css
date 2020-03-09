@@ -1,0 +1,79 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
+
+body {
+  margin: 0 auto;
+  max-width: 100em;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.5;
+  padding: 1.5em 1em;
+  color: #566b78;
+}
+
+h1 {
+	text-align: center;
+}
+
+h2 {
+  margin-top: 1em;
+  padding-top: 1em;
+}
+
+h1,
+h2,
+strong {
+  color: #333;
+}
+
+code {
+  padding: 2px 4px;
+  vertical-align: text-bottom;
+}
+
+
+code,
+pre {
+  background: #f5f7f9;
+  padding: 1em;
+  border-bottom: 1px solid #d8dee9;
+}
+
+pre {
+  border-left: 2px solid #69c;
+}
+
+#jsoneditorOp {
+  height: 40em;
+  margin-top: 1em;
+}
+
+#jsoneditorIp {
+  height: 40em;
+  margin-top: 1em;
+}
+
+#fileType{
+  margin-left: 10px;
+}
+#fileInput {
+  margin-left: 10px;
+}
+
+#btnModify{
+  margin-left: 10px;
+}
+
+.container {
+  display: flex;
+  border: 1px solid black;
+  box-shadow: 2px 2px 2px #b8b8b8;
+}
+
+.ipContainer{
+  flex: 1;
+  padding: 15px;
+}
+
+.opContainer{
+  flex: 1;
+  padding: 15px;
+}

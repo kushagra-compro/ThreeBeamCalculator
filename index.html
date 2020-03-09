@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>3 Beam Calculations</title>
+    <link href="./test/dist/jsoneditor.min.css" rel="stylesheet" type="text/css">
+    <script src="./test/dist/jsoneditor.min.js"></script>
+    <script src="./dist/three-beam-calculator.js"></script>
+    <script src="./test/main.js"></script>
+    <link href="./test/dist/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <h1>3 Beam Reaction and Deflection Calculation</h1>
+
+    <div class="container">
+        <section style="padding: 1rem; width: 100%;">
+            <form>
+                <div style="margin-bottom: 1em;">
+                    <input id="btnModify" type="button" onclick="readDocument()" value="Calculate" />
+                </div>
+                <div style="margin-top: 1em; margin-bottom: 1em; display: flex;">
+                    <div class="ipContainer" id="ipContainer" style="width:45%">
+                        <label>Calculation Input: </label>
+                        <button type='button' onclick="toggleMode(event)"> Toggle Mode </button>
+                        <div id="jsoneditorIp"></div>
+                    </div>
+                    <div class="opContainer" id="opContainer" style="width:45%">
+                        <label>Calculation Output: </label>
+                        <button type='button' onclick="toggleMode(event)"> Toggle Mode </button>
+                        <div id="jsoneditorOp"></div>
+                    </div>
+                </div>
+
+            </form>
+        </section>
+    </div>
+    <script type="text/javascript">
+        var readDocument = null;
+        var processFiles = null;
+        var blankObject = {};
+        var mode = 'view';
+        var opContainer = document.getElementById("opContainer");
+        var ipContainer = document.getElementById("ipContainer");
+        var fileTypeSelector = document.getElementById("fileType");
+        var fileInput = document.getElementById("fileInput");
+        var jsoneditorIp = document.getElementById("jsoneditorIp");
+        //ipContainer.style.display = "none";
+        var jsoneditorOp = document.getElementById("jsoneditorOp");
+        var options = {
+            mode: 'view'
+        };
+        var ipEditor = new JSONEditor(jsoneditorIp, { mode: 'code' });
+        var opEditor = new JSONEditor(jsoneditorOp, { mode: 'code' });
+        var model = null;
+        var entityReference =
+        {
+            sheetName: "Sheet1",
+            rowIndex: 0,
+            columnIndex: 1
+        };
+
+        var validation =
+        {
+            "validate": "value",
+            "operator": "equals",
+            "extrainfo": {
+                "ignoreCase": true,
+                "trimWhitespace": true
+            },
+            "id": "R1.1"
+        };
+
+        (function () {
+            let calcData;
+            fetch('../assets/ThreeBeamCalcData.json')
+                .then((response) => {
+                    return response.json();
+                })
+                .then((responseData) => {
+                    ipEditor.set(responseData);
+                })
+        })();
+
+        (function (root) {  // root = global
+            "use strict";
+
+            root.processFiles = function (files) {
+                var file = files[0];
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    openedFileName = file.name;
+                    openedFileData = e.target.result;
+                };
+
+                reader.readAsArrayBuffer(file);
+            }
+
+            root.toggleMode = function (event) {
+                if (event.target.parentElement.getAttribute("id") == "ipContainer") {
+                    if (mode === 'view') {
+                        mode = 'code';
+                        ipEditor.setMode('code');
+                    } else {
+                        mode = 'view';
+                        ipEditor.setMode('view');
+                    }
+                } else if (event.target.parentElement.getAttribute("id") == "opContainer") {
+                    if (mode === 'view') {
+                        mode = 'code';
+                        opEditor.setMode('code');
+                    } else {
+                        mode = 'view';
+                        opEditor.setMode('view');
+                    }
+                }
+
+            }
+
+            root.toggleFileType = function (event) {
+                var selectedValue = fileTypeSelector.options[fileTypeSelector.selectedIndex].value;
+
+                if (selectedValue == "JSON") {
+                    ipContainer.style.display = "block";
+                    fileInput.style.display = "none";
+                } else {
+                    ipContainer.style.display = "none";
+                    fileInput.style.display = "inline-block";
+                }
+                opContainer.style.display = "none";
+                opEditor.set(blankObject);
+                ipEditor.set(blankObject);
+            }
+
+            var openedFileName = null;
+            var openedFileData = null;
+
+            root.readDocument = function () {
+                openedFileData = ipEditor.getText();
+                openedFileData = JSON.parse(openedFileData);
+                var ref = new ThreeBeamCalcModuleWrapper();
+                try {
+                    let calcData = ref.calculateReactionnAndDeflection(openedFileData);
+                    opEditor.set(calcData);
+                } catch (error) {
+                    alert(error, "Please provide a valid JSON");
+                    return;
+                }
+            }
+            opContainer.style.display = "block";
+        }
+
+
+        )(this);
+
+
+
+    </script>
+</body>
+
+</html>
