@@ -17,7 +17,7 @@
     "copy-webpack-plugin": "^4.6.0",
     "typescript": "^2.5.3",
     "webpack": "^4.35.3",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.12"
   },
   "dependencies": {
     "@types/node": "^13.7.7",
